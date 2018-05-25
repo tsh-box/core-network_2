@@ -6,9 +6,7 @@ services:
       context: ../
       dockerfile: Dockerfile
     networks:
-      databox-system-net:
-        aliases:
-          - databox-network
+      - databox-system-net
     volumes:
       - './certs/databox-network:/run/secrets/DATABOX_NETWORK_KEY'
     cap_add:
